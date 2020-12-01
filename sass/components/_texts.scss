@@ -1,0 +1,113 @@
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 60px;
+  letter-spacing: 0.06em;
+  color: map-get($colors, "white");
+  margin-bottom: 30px;
+}
+
+.menu-about-us {
+  h2 {
+    margin-bottom: 10px;
+  }
+  &__title {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+  }
+}
+
+.work {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 0.03em;
+  color: map-get($colors, "title-text");
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.our-team {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  margin-bottom: 50px;
+  &__text {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.03em;
+    color: map-get($colors, "ptimary-text");
+    text-align: center;
+  }
+}
+
+.portfolio-card {
+  &__thumb p {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(100%);
+    display: inline-flex;
+    padding: 63px 24px;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    background: rgba(33, 150, 243, 0.9);
+    color: map-get($colors, "white");
+    opacity: 0;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  h2 {
+    margin-bottom: 4px;
+  }
+  &__title {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 36px;
+    letter-spacing: 0.06em;
+    color: map-get($colors, "title-text");
+  }
+  &__name {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.03em;
+    color: map-get($colors, "primary-text");
+  }
+}
+
+.clients {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: map-get($colors, "title-text");
+  margin-bottom: 50px;
+  padding-top: 94px;
+}

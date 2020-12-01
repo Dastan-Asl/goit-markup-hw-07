@@ -1,0 +1,210 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 528px;
+  min-height: 581px;
+  background-color: map-get($colors, "white");
+}
+
+.form-modal {
+  padding: 40px 40px;
+  & > h3 {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: map-get($colors, "title-text");
+    margin-bottom: 12px;
+  }
+  &-nav {
+    display: flex;
+    flex-direction: column;
+  }
+  &-nav > label {
+    margin-bottom: 4px;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: map-get($colors, "ptimary-text");
+  }
+  &-nav__input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 42px;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &-nav__input:hover,
+  &-nav__input:focus {
+    border-color: map-get($colors, "accent");
+  }
+  &-nav__icon > svg {
+    position: absolute;
+    top: 14px;
+    left: 15px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &-nav__input:hover + svg,
+  &-nav__input:focus + svg {
+    fill: map-get($colors, "accent");
+  }
+  &-nav__icon {
+    position: relative;
+    margin-bottom: 10px;
+  }
+  &-nav textarea {
+    width: 100%;
+    height: 120px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+    outline: none;
+  }
+  &-nav textarea:hover,
+  &-nav textarea:focus {
+    border-color: map-get($colors, "accent");
+  }
+}
+
+textarea {
+  &::placeholder {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    resize: none;
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.checked {
+  margin: 0 12px;
+  & > input {
+    width: 16px;
+    height: 15px;
+    margin-right: 8px;
+  }
+  & > label {
+    display: flex;
+    align-items: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: map-get($colors, "primary-text");
+  }
+  label > a {
+    text-decoration: underline;
+    color: map-get($colors, "accent");
+  }
+  &__icon {
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--title-text-color);
+    border-radius: 4px;
+    margin-right: 8px;
+  }
+}
+
+.checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  &:checked + .checked__icon {
+    border-color: map-get($colors, "accent");
+    background-color: map-get($colors, "accent");
+    background-image: url("../images/icon-check.svg");
+    background-size: contain;
+    background-origin: border-box;
+  }
+}
+
+.checked-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-modal {
+  display: block;
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  color: map-get($colors, "wite");
+  border: none;
+  border-radius: 4px;
+  margin: 30px auto 0;
+  cursor: pointer;
+}
+
+.close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: map-get($colors, "white");
+  & > svg {
+    fill: #000000;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &:hover > svg {
+    fill: map-get($colors, "accent");
+  }
+}
+
+.checked__icon {
+  width: 16px;
+  height: 16px;
+  border: 1px solid map-get($colors, "title-text");
+  border-radius: 4px;
+  margin-right: 8px;
+}

@@ -1,0 +1,154 @@
+.menu {
+  list-style-type: none;
+  & h3 {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.03em;
+    color: map-get($colors, "title-text");
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  p {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: map-get($colors, "primary-text");
+  }
+
+  a {
+    text-decoration: none;
+    color: map-get($colors, "title-text");
+  }
+
+  &.our-photo p {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: map-get($colors, "white");
+  }
+
+  &.menu-team p {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: map-get($colors, "primary-text");
+  }
+}
+
+.nav-menu {
+  position: relative;
+  margin-left: 93px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  list-style-type: none;
+
+  li:not(:first-child) {
+    margin-left: 50px;
+  }
+
+  &.navigation a {
+    color: map-get($colors, "primary-text");
+  }
+}
+
+.menu-about-us {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  li:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.our-photo {
+  display: flex;
+  justify-content: space-between;
+
+  li {
+    position: relative;
+  }
+}
+
+.menu-team {
+  display: flex;
+  justify-content: space-between;
+
+  li > img {
+    margin-bottom: 30px;
+  }
+  & > li {
+    width: 270px;
+    height: 428px;
+    background-color: map-get($colors, "white");
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+}
+
+.menu-portfolio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  li:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+.portfolio-card {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &__thumb {
+    position: relative;
+    width: 370px;
+    height: 294px;
+  }
+
+  li {
+    margin-bottom: 30px;
+    background-color: map-get($colors, "white");
+    border: 1px solid map-get($colors, "white");
+  }
+
+  li.no-margin {
+    margin: 0;
+  }
+}
+
+.our-clients {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 94px;
+
+  & > li:not(:last-child) {
+    margin-right: 30px;
+  }
+}

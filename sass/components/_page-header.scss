@@ -1,0 +1,16 @@
+header {
+  border-bottom: 1px solid map-get($colors, "header-border");
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

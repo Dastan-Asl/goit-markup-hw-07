@@ -1,0 +1,13 @@
+.navigation__icon {
+  margin-right: 10px;
+}
+
+.our-clients {
+  &__link > svg {
+    fill: #afb1b8;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__link:hover > svg {
+    fill: map-get($colors, "accent");
+  }
+}
